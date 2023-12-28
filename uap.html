@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Table Harga</h1>
+    <Table>
+        <p>
+            <label for="kode">001</label>
+            <label for="barang">BarangA</label>
+            <label for="Harga">10000</label>
+        </p>
+    </Table>
+    <Table>
+        <p>
+            <label for="kode">002</label>
+            <label for="barang">BarangB</label>
+            <label for="Harga">20000</label>
+        </p>
+    </Table>
+    <Table>
+        <p>
+            <label for="kode">003</label>
+            <label for="barang">BarangC</label>
+            <label for="Harga">30000</label>
+        </p>
+    </Table>
+    
+
+    <h2>Inputan User</h2>
+    <p>
+        <label for="kode">Masukkan Kode    :</label>
+        <input type="text" id="kode">
+    </p>
+    <p>
+        <label for="qt">Banyaknya Barang :</label>
+        <input type="text" id="qt">
+    </p>
+    <p>
+        <button onclick="HargaBarang()">submit</button>
+    </p>
+
+    <script>
+        function HargaBarang () {
+            var kode = parseFloat(document.getElementById('kode').value);
+            var total = parseFloat(document.getElementById('qt').value);
+
+            if(kode = '001'){
+                harga = 10000
+            // }else if(kode = '002'){
+            //     harga = 20000
+            // }else if (kode = '003'){
+            //     harga = 30000
+            }else{
+                alert("Tidak ditemukan kode")
+            }
+
+            if(!isNaN(kode) && !isNaN(total)){
+                var jumlah = harga * total;
+                alert("Total pembayaran adalah : " +jumlah);
+                prompt("Masukkan uang user : ")
+            }else{
+                alert("Jangan Ada yang kosong");
+            }
+        }
+    </script>
+</body>
+</html>
